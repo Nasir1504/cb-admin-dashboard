@@ -51,7 +51,7 @@ const navItems: NavItem[] = [
     name: "Products",
     icon: <ProductsIcon />,
     subItems: [
-      { name: "Collections", path: "/blank", pro: false },
+      { name: "Collections", path: "/collections", pro: false },
       { name: "Inventory", path: "/blank", pro: false },
       { name: "Purchase orders", path: "/blank", pro: false },
       { name: "Transfers", path: "/blank", pro: false },
