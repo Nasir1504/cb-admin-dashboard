@@ -197,8 +197,11 @@ export function CollectionsTableClient({ rows }: CollectionsTableClientProps) {
         }
         setSelected([]);
     };
-    const handleCollectionById = (event: React.MouseEvent<unknown>, id: number) => {
-        router.push(`/collections/${id}`);
+    const handleCollectionById = (event: React.MouseEvent<unknown>, name: string) => {
+        const safeName = encodeURIComponent(
+            name.trim().toLowerCase().replace(/\s+/g, '-')
+        );
+        router.push(`/collections/${safeName}`);
     };
     const handleClick = (event: React.MouseEvent<unknown>, id: number) => {
         const selectedIndex = selected.indexOf(id);
@@ -284,7 +287,7 @@ export function CollectionsTableClient({ rows }: CollectionsTableClientProps) {
                                             />
                                         </TableCell>
                                         <TableCell component="th" id={labelId} scope="row" padding="none"
-                                            onClick={(event) => handleCollectionById(event, row.id)}
+                                            onClick={(event) => handleCollectionById(event, row.name)}
                                         >
                                             {row.name}
                                         </TableCell>
