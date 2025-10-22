@@ -51,11 +51,12 @@ const navItems: NavItem[] = [
     name: "Products",
     icon: <ProductsIcon />,
     subItems: [
+      { name: "Products", path: "/products", pro: false },
       { name: "Collections", path: "/collections", pro: false },
-      { name: "Inventory", path: "/blank", pro: false },
-      { name: "Purchase orders", path: "/blank", pro: false },
-      { name: "Transfers", path: "/blank", pro: false },
-      { name: "Gift cards", path: "/blank", pro: false },
+      { name: "Inventory", path: "/inventory", pro: false },
+      // { name: "Purchase orders", path: "/blank", pro: false },
+      // { name: "Transfers", path: "/blank", pro: false },
+      // { name: "Gift cards", path: "/blank", pro: false },
 
     ],
   },
@@ -63,7 +64,8 @@ const navItems: NavItem[] = [
     name: "Customers",
     icon: <CustomersIcon />,
     subItems: [
-      { name: "Segments", path: "/blank", pro: false },
+      { name: "Customers", path: "/customers", pro: false },
+      { name: "Segments", path: "/segments", pro: false },
     ],
   },
   {
