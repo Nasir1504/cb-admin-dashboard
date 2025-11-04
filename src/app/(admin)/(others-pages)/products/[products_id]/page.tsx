@@ -1,13 +1,11 @@
 
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 interface ProductsDetailsProps {
-    params: {
-        products_id: string;
-    };
+    params: Promise<{ products_id: string }>;
 }
 
-export default function ProductsDetails({ params }: ProductsDetailsProps) {
-    const { products_id } = params;
+export default async function ProductsDetails({ params }: ProductsDetailsProps) {
+    const { products_id } = await params;
     return <div>
         Item ID: {products_id}
         <PageBreadcrumb parentName="collections" parentHref="/collections" pageTitle={products_id} />
