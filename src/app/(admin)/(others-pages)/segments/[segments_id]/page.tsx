@@ -1,13 +1,11 @@
 
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 interface SegmentsDetailsProps {
-    params: {
-        segments_id: string;
-    };
+    params: Promise<{segments_id: string}>
 }
 
-export default function SegmentsDetails({ params }: SegmentsDetailsProps) {
-    const { segments_id } = params;
+export default async function SegmentsDetails({ params }: SegmentsDetailsProps) {
+    const { segments_id } = await params;
     return <div>
         Item ID: {segments_id}
         <PageBreadcrumb parentName="collections" parentHref="/collections" pageTitle={segments_id} />
