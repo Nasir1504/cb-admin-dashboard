@@ -77,6 +77,7 @@ export const OrderTable: React.FC<Props> = ({
     if (currentPage > totalPages) {
       setCurrentPage(totalPages);
     }
+    // eslint-disable-next-line
   }, [sortedOrders.length, totalPages]);
 
   const paginatedOrders = sortedOrders.slice(
