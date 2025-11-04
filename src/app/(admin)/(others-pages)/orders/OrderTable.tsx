@@ -77,6 +77,7 @@ export const OrderTable: React.FC<Props> = ({
     if (currentPage > totalPages) {
       setCurrentPage(totalPages);
     }
+
     // eslint-disable-next-line
   }, [sortedOrders.length, totalPages]);
 
@@ -91,6 +92,9 @@ export const OrderTable: React.FC<Props> = ({
       paginatedOrders.length > 0 &&
       paginatedOrders.every((o) => selectedOrderKeys.has(o.order));
     setSelectAllChecked(allVisibleSelected);
+
+        // eslint-disable-next-line
+
   }, [paginatedOrders, selectedOrderKeys]);
 
   // Handlers
